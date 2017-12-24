@@ -30,6 +30,6 @@ class SinglyLinkedList:
                  else:                       
                      prev.next = current.next
              self.size -= 1                  
-         return                              
-         prev = current                      
-         current = current.next   
+             return                              
+             prev = current                      
+             current = current.next   
