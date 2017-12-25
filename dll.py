@@ -9,3 +9,13 @@ class DoublyLinkedList(object):
         self.head = None
         self.tail = None
         self.count = 0
+    def append(self, data):
+        new_node = Node(data, None, None)
+        if self.head is None:
+            self.head = new_node
+            self.tail = self.head
+        else:
+            new_node.prev = self.tail
+            self.tail.next = new_node
+            self.tail = new_node
+            self.count += 1
