@@ -39,4 +39,8 @@ class SinglyLinkedList:
         for node in self.iter():  
             if data == node:      
                 return True           
-        return False   
+        return False
+     def clear(self):
+         self.tail = None
+         self.head = None
+
