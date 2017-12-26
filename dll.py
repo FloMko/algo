@@ -1,5 +1,5 @@
 class Node(object):
-    def __init__(self, data=None, next=None, prev=None)
+    def __init__(self, data=None, next=None, prev=None):
         self.data = data
         self.next = next
         self.prev = prev
@@ -18,7 +18,7 @@ class DoublyLinkedList(object):
             new_node.prev = self.tail
             self.tail.next = new_node
             self.tail = new_node
-            self.count += 1
+        self.count += 1
     def delete(self, data):
         current = self.head
         node_Deleted = False
@@ -32,7 +32,7 @@ class DoublyLinkedList(object):
             self.tail = self.tail.prev
             self.tail.next = None
             node_deleted = True
-        else
+        else:
             while current:
                 if current.data == data:
                     current.prev.next = current.next
@@ -41,3 +41,14 @@ class DoublyLinkedList(object):
                 current = current.next
         if node_deleted:
             self.count -= 1
+    def iter(self):
+         current = self.head
+         while current:
+             val = current.data
+             current = current.next
+             yield val
+    def contain(self,data):
+        for node_data in self.iter():
+            if data == node_data:
+                return True
+            return False
