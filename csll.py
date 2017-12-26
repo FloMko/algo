@@ -11,11 +11,11 @@ class CircularSinglyLinkedList(SinglyLinkedList):
             self.head = node
             self.tail = node
             self.head.next = self.tail
-            self.size +=1
+        self.size += 1
     def delete(self, data):
         current = self.tail
         prev = self.tail
-        while current:
+        while prev == current or prev != self.head:
             if current.data == data:
                 if current == self.tail:
                     self.tail = current.next
