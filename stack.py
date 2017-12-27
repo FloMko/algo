@@ -25,4 +25,8 @@ class Stack:
             return data
         else:
             return None
-
+    def peek(self):
+        if self.top:
+            return self.top.data
+        else:
+            return None
