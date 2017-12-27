@@ -13,7 +13,7 @@ class Stack:
             self.top = node
         else:
             self.top = node
-            self.size += 1
+        self.size += 1
     def pop(self):
         if self.top:
             data = self.top.data
