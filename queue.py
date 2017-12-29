@@ -20,3 +20,18 @@ class StackQueue:
             while self.inbound_stack:
                 self.outbound_stack.append(self.inbound_stack.pop())
                 return self.outbound_stack.pop()
+
+class Node():
+    def __init__(self, data=None, post=None, prev=None):
+        self.data = data
+        self.post = post
+        self.prev = prev
+     def __str__(self):
+         return str(data)
+
+class NodeQueue:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.count = 0
+    
