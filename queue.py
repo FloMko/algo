@@ -39,6 +39,7 @@ class NodeQueue:
         if self.head is None:
             self.head = new_node
             self.tail = self.head
+            self.count += 1
         else:
             new_node.prev = self.tail
             self.tail.next = new_node
