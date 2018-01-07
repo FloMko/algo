@@ -26,7 +26,7 @@ class Node():
         self.data = data
         self.post = post
         self.prev = prev
-     def __str__(self):
+    def __str__(self):
         return str(data)
 
 class NodeQueue:
