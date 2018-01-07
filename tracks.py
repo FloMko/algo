@@ -12,3 +12,8 @@ class MediaPlayerQueue(NodeQueue):
         super(MediaPlayerQueue, self).__init__()
     def add_track(self, track):
         self.enqueue(track)
+    def play(self):
+        while self.count > 0:
+            current_track_node = self.dequeue()
+            print("Now playing {}".format(current_track_node.data.title))
+            time.sleep(current_track_node.data.length)
