@@ -13,3 +13,9 @@ class Bst:
         while current.left_child:
             current = current.left_child
         return current
+    def find_max(self):
+        current = self.root_node
+        while current.right_child:
+            current = current.right_child
+        return current
+
