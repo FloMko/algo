@@ -55,3 +55,4 @@ class NodeQueue:
             self.head = self.head.next
             self.head.prev = None
             self.count -= 1
+        return current

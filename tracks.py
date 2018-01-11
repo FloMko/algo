@@ -2,6 +2,7 @@ from random import randint
 import time
 from queue import Node, NodeQueue
 
+
 class Track:
     def __init__(self, title=None):
         self.title = title
