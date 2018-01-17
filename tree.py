@@ -114,3 +114,10 @@ class Bst:
         self.inorder(current.left_child)
         print(current.data)
         self.inorder(current.right_child)
+    def preorder(self, root_node):
+        current = root_node
+        if current is None:
+            return
+        print(current.data)
+        self.preorder(current.left_child)
+        self.preorder(current.right_child)
