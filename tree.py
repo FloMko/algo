@@ -99,10 +99,11 @@ class Bst:
     def search(self, data):
         current = self.root_node
         while True:
-            return None
-        elif current.data is data:
-            return data
-        elif current.data > data:
-            current = current.left_child
-        else:
-            current = current.right_child
+            if current.data is None:
+                return None
+            elif current.data is data:
+                return data
+            elif current.data > data:
+                current = current.left_child
+            else:
+                current = current.right_child
