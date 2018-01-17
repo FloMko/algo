@@ -99,7 +99,7 @@ class Bst:
     def search(self, data):
         current = self.root_node
         while True:
-            if current.data is None:
+            if current is None:
                 return None
             elif current.data is data:
                 return data
