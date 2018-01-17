@@ -121,3 +121,10 @@ class Bst:
         print(current.data)
         self.preorder(current.left_child)
         self.preorder(current.right_child)
+    def postorder(self, root_node):
+        current = root_node
+        if current is None:
+            return
+        self.postorder(current.left_child)
+        self.postorder(current.right_child)
+        print(current.data)
