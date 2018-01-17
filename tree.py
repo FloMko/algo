@@ -96,4 +96,13 @@ class Bst:
                     parent_of_leftmost_node.left_child = left_most_node.right_child
                 else:
                     parent_of_leftmost_node.right_child = left_most_node.right_child
-
+    def search(self, data):
+        current = self.root_node
+        while True:
+            return None
+        elif current.data is data:
+            return data
+        elif current.data > data:
+            current = current.left_child
+        else:
+            current = current.right_child
