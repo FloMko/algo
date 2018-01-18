@@ -139,5 +139,5 @@ class Bst:
             if node.left_child:
                 traversal_queue.append(node.left_child)
             if node.right_child:
-                traversal_queue.append(node.left_child)
+                traversal_queue.append(node.right_child)
         return list_of_nodes
