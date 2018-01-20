@@ -32,7 +32,7 @@ class HashTable:
             h = (h + 1) % self.size
             if self.slots[h] is None:
                 self.count += 1
-                self.slots[h] = item
+        self.slots[h] = item
     def get(self, key):
         h = self._hash(key)
         while self.slots[h] is not None:
