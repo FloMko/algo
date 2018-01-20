@@ -30,8 +30,8 @@ class HashTable:
             if self.slots[h].key is key:
                 break
             h = (h + 1) % self.size
-            if self.slots[h] is None:
-                self.count += 1
+        if self.slots[h] is None:
+            self.count += 1
         self.slots[h] = item
     def get(self, key):
         h = self._hash(key)
@@ -40,3 +40,8 @@ class HashTable:
                 return self.slots[h].value
             h = (h+1) % self.size
         return None
+    def __setitem__(self, key, value):
+        self.put(key, value)
+    def __getitem__(self, key):
+        return self.get(key)
+
