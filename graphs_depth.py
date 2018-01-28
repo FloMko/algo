@@ -9,6 +9,7 @@ def prepare():
     graph['E'] = ['C', 'H']
     graph['F'] = ['C', 'G']
     graph['C'] = ['D', 'S', 'E', 'F']
+    return graph
 
 def depth_first_search(graph, root):
     visited_vertices = list()
@@ -21,11 +22,14 @@ def depth_first_search(graph, root):
             adj_nodes = graph[node]
             if set(adj_nodes).issubset(set(visited_vertices)):
                 graph_stack.pop()
-            if len(graph_stack) > 0:
-                node = graph_stack[-1]
+                if len(graph_stack) > 0:
+                    node = graph_stack[-1]
             continue
         else:
+            print(adj_nodes)
             remaining_elements = set(adj_nodes).difference(set(visited_vertices))
+            print('rem elem: ')
+            print(sorted(remaining_elements))
             first_adj_node = sorted(remaining_elements)[0]
             graph_stack.append(first_adj_node)
             node = first_adj_node
@@ -33,7 +37,9 @@ def depth_first_search(graph, root):
 
 
 def main():
-    graphs = prepare()
+    graph = prepare()
+    visit = depth_first_search(graph,'A')
+    print(visit)
 
 if __name__ == '__main__':
     main()
