@@ -12,17 +12,21 @@ def merge_sort(unsorted_list):
 def merge(first_sublist, second_sublist):
     i = j = 0
     merged_list = []
+    
     while i<len(first_sublist) and j < len(second_sublist):
-        if first_sublist < second_sublist:
+        if first_sublist[i] < second_sublist[j]:
             merged_list.append(first_sublist[i])
             i +=1
         else:
             merged_list.append(second_sublist[j])
             j+=1
+    
     while i < len(first_sublist):
         merged_list.append(first_sublist[i])
         i +=1
+    
     while j < len(second_sublist):
         merged_list.append(second_sublist[j])
         j +=1
+    
     return merged_list
